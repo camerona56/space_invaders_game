@@ -1,0 +1,25 @@
+.grid {
+  height: 300px;
+  width: 300px;
+  background: lightblue;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cell {
+  border: solid darkblue 1px;
+  height: 18px;
+  width: 18px;
+}
+
+.invader {
+
+}
+
+.shooter {
+
+}
+
+.laser {
+
+}

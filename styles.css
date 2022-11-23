@@ -12,7 +12,7 @@
 }
 
 .invader {
-  background-image: url('/images/invader.png');
+  background-image: url('../images/invader.png');
   background-size: 1.6rem;
   background-position: center;  
 }
@@ -24,13 +24,13 @@
 }
 
 .laser {
-  background-image: url('/images/laser.png');
+  background-image: url('../images/laser.png');
   background-size: 2rem;
   background-position: center;
 }
 
 .boom {
-  background-image: url('/images/boom.png');
+  background-image: url('../images/boom.png');
   background-size: 1rem;
   background-position: center;
 }

@@ -12,18 +12,25 @@
 }
 
 .invader {
-  background-color: purple;
-  border-radius: 10px;
+  background-image: url('/images/invader.png');
+  background-size: 1.6rem;
+  background-position: center;  
 }
 
 .shooter {
-  background-color: green;
+  background-image: url('/images/shooter.png');
+  background-size: 1.33rem;
+  background-position: center;
 }
 
 .laser {
-  background-color: orange;
+  background-image: url('/images/laser.png');
+  background-size: 2rem;
+  background-position: center;
 }
 
 .boom {
-  background-color: red;
+  background-image: url('/images/boom.png');
+  background-size: 1rem;
+  background-position: center;
 }

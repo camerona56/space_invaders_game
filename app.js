@@ -9,6 +9,7 @@ let invadersId
 let goingRight = true
 let aliensRemoved = []
 let results = 0
+const audio = document.querySelector('audio')
 
 
 /* for loop required in order to create square grid for game
@@ -64,7 +65,7 @@ shooter will be removed from the grid and then added after the currentShooterInd
 
 function moveShooter(e) {
   cells[currentShooterIndex].classList.remove('shooter')
-  switch(e.key) {
+  switch (e.key) {
     case 'ArrowLeft':
       if (currentShooterIndex % width !== 0) currentShooterIndex -=1
       break
@@ -92,7 +93,7 @@ function moveInvaders() {
 
   if (rightEdge && goingRight) {
     for (let i = 0; i < alienInvaders.length; i++) {
-      alienInvaders[i] += width +1
+      alienInvaders[i] += width + 1
       direction = -1
       goingRight = false
     }
@@ -100,7 +101,7 @@ function moveInvaders() {
 
   if (leftEdge && !goingRight) {
     for (let i = 0; i < alienInvaders.length; i++) {
-      alienInvaders[i] += width -1
+      alienInvaders[i] += width - 1
       direction = 1
       goingRight = true
     }
@@ -131,7 +132,7 @@ function moveInvaders() {
 
 /* set invadersId equal to setInterval(moveInvaders, 500) to move the invaders every 300ms */
 
-invadersId = setInterval(moveInvaders, 500)
+invadersId = setInterval(moveInvaders, 300)
 
 /* declare shoot function that contains a movelaser function that removes the laser from one cell and adds it to another
 within this function, create a if statement that removes the laser and invader when they are contained in the same cell
@@ -141,10 +142,13 @@ use a switch statement to trigger the moveLaser function when the up arrow is cl
 function shoot(e) {
   let laserId
   let currentLaserIndex = currentShooterIndex
+  audio.src = 'sounds/shoot.wav'
+  audio.play()
   function moveLaser(){
     cells[currentLaserIndex].classList.remove('laser')
     currentLaserIndex -= width
     cells[currentLaserIndex].classList.add('laser')
+
 
     if (cells[currentLaserIndex].classList.contains('invader')){
       cells[currentLaserIndex].classList.remove('laser')

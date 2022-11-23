@@ -18,7 +18,7 @@
 }
 
 .shooter {
-  background-image: url('https://camerona56.github.io/space_invaders_game/images/shooter.png');
+  background-image: url('../images/shooter.png');
   background-size: 1.33rem;
   background-position: center;
 }

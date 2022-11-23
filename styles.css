@@ -12,7 +12,7 @@
 }
 
 .invader {
-  background-image: url('/images/invader.png');
+  background-image: url('main/images/invader.png');
   background-size: 1.6rem;
   background-position: center;  
 }

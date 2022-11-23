@@ -126,6 +126,8 @@ function moveInvaders() {
   }
   if (aliensRemoved.length === alienInvaders.length){
     resultsDisplay.innerHTML = 'YOU WIN'
+    audio.src = 'sounds/winner.mp3'
+    audio.play()
     clearInterval(invadersId)
   }
 }
@@ -154,6 +156,8 @@ function shoot(e) {
       cells[currentLaserIndex].classList.remove('laser')
       cells[currentLaserIndex].classList.remove('invader')
       cells[currentLaserIndex].classList.add('boom')
+      audio.src = 'sounds/invaderkilled.wav'
+      audio.play()
 
       setTimeout(()=> cells[currentLaserIndex].classList.remove('boom'),300)
       clearInterval(laserId)
